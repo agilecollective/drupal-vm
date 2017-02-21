@@ -1,0 +1,5 @@
+---
+- name: Install Netbeans
+  apt: "name={{ item }} state=installed"
+  with_items:
+    - netbeans

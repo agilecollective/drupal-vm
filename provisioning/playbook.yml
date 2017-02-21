@@ -176,3 +176,7 @@
         loop_var: outer_item
       with_fileglob:
         - "{{ post_provision_tasks_dir|default(omit) }}"
+
+    - include: tasks/desktop.yml
+    - include: tasks/netbeans.yml
+    - include: tasks/atom.yml

@@ -1,0 +1,9 @@
+---
+- name: Add repository for Atom text editor
+  apt_repository: repo='ppa:webupd8team/atom'
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install Atom text editor
+  apt: "name={{ item }} state=installed"
+  with_items:
+    - atom
